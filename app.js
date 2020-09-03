@@ -28,17 +28,33 @@ function getId(url) {
     return match && match[2].length === 11 ? match[2] : null;
 }
 
-function renderPhotosToDOM() {
-    const imageContainer = document.getElementById('image-container');
+function renderVideosToDOM() {
+    const imageContainer = document.getElementById('container');
     const loader = document.getElementById('loader-container');
 
-    
+    imageContainer.innerHTML = generateVideoHTML('test','hello','61P0yKsU8yw');
+}
+
+/********************************************
+    HTML TEMPLATE
+********************************************/
+function generateVideoHTML(title, description, id) {
+    return `
+        <div class="video-container ">
+            <div class="image-description">
+                <div><h2>${title}</h2></div>
+                <div><p>${description}</p></div>
+            </div>
+            <iframe width="560" height="349" src="http://www.youtube.com/embed/${id}" frameborder="0" allowfullscreen></iframe>
+        </div>
+    `
 }
 
 /********************************************
     FUNCTIONS CALL
 ********************************************/
 getVideosFromAPI();
+renderVideosToDOM();
 console.log(dataArray);
 
 /********************************************
