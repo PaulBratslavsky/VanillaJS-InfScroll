@@ -73,7 +73,7 @@ function generateVideoHTML(title, description, id, callbackFunction) {
     videoDescriptionText.innerText = description;
 
     const video = document.createElement('iframe');
-    video.setAttribute('src', `http://www.youtube.com/embed/${id}`);
+    video.setAttribute('src', `https://www.youtube.com/embed/${id}`);
     video.setAttribute('frameborder', '0');
 
     video.addEventListener('load', callbackFunction);
@@ -97,7 +97,7 @@ function generateVideoHTML(title, description, id, callbackFunction) {
 //                 <div><h2>${title}</h2></div>
 //                 <div><p>${description}</p></div>
 //             </div>
-//             <iframe width="560" height="349" src="http://www.youtube.com/embed/${id}" frameborder="0" allowfullscreen></iframe>
+//             <iframe width="560" height="349" src="https://www.youtube.com/embed/${id}" frameborder="0" allowfullscreen></iframe>
 //         </div>
 //     `
 // }
