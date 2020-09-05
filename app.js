@@ -2,7 +2,7 @@
     GLOBAL VARIABLES
 ********************************************/
 const loader = document.getElementById('loader-container');
-let count = 2;
+let count = 4;
 let skip = 0;
 let dataArray = [];
 
