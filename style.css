@@ -23,7 +23,6 @@ body {
   background: rgb(12, 12, 12, 0.2);
 }
 
-/* Another Great Way To Center */
 .title-container h1 {
   font-size: 4rem;
   position: fixed;
@@ -45,6 +44,7 @@ body {
   bottom: 0;
   right: 0;
   background: rgb(12, 12, 12, 0.2);
+  z-index: 1;
 }
 
 /* Another Great Way To Center */
@@ -85,16 +85,10 @@ body {
   height: 100%;
 }
 
-.image-container img {
-  object-fit: cover;
-  height: 100vh;
-  width: 100vw;
-}
-
 /*********************************
   TITLE
 *********************************/
-.image-description {
+.video-description {
   position: absolute;
   padding: 1rem;
   bottom: 16px;
@@ -108,32 +102,33 @@ body {
   transition: opacity 0.5s ease-in-out;
 }
 
-.image-description:hover {
+.video-description:hover {
   opacity: 1;
 }
 
-.image-description div {
+
+.video-description div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.image-description div:first-child {
+.video-description div:first-child {
   color: whitesmoke;
   background: #352222;
 }
 
-.image-description div:last-child {
+.video-description div:last-child {
   color: gray;
   background: whitesmoke;
 }
 
-.image-description h2 {
+.video-description h2 {
   padding: 1rem;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
-.image-description p {
+.video-description p {
   padding: 1rem;
 }
 
@@ -238,11 +233,38 @@ body {
   .title-container h1 {
     font-size: 3rem
   }
+
+  .video-description {
+    padding: 0;
+    bottom: 0;
+  }
+
+  .video-description h2 {
+    padding: 1rem;
+    font-size: 0.7rem;
+  }
+  
+  .video-description p {
+    padding: 1rem;
+    font-size: 0.7rem;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .title-container h1 {
     font-size: 2rem;
+  }
+
+
+
+  .video-description h2 {
+    padding: 0.5rem;
+    font-size: 0.2rem;
+  }
+  
+  .video-description p {
+    padding: 0.5rem;
+    font-size: 0.3rem;
   }
 }
 
@@ -250,4 +272,18 @@ body {
   .title-container h1 {
     font-size: 1rem;
   }
+
+
+  .video-description h2 {
+    padding: 0.2rem;
+    font-size: 0.2rem;
+    text-align: center;
+  }
+  
+  .video-description p {
+    padding: 0.3rem;
+    font-size: 0.2rem;
+  }
+
+
 }
